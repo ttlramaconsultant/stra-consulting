@@ -12,3 +12,8 @@
 footer{background:#061426;color:#aebfd3;padding:28px 0}.footer-wrap{display:flex;justify-content:space-between;gap:30px;font-size:11px}.footer-wrap strong{display:block;color:#fff;font-size:13px}.footer-wrap span{display:block;margin-top:4px}
 @media(max-width:950px){.site-header nav{display:none}.menu-toggle{display:block}.site-header nav.open{display:flex;position:absolute;left:0;right:0;top:78px;background:#fff;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.hero-grid,.two-col{grid-template-columns:1fr;gap:45px}.hero{padding-top:65px}.service-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr 1fr}.steps>div:nth-child(2n){border-right:0}.steps>div{border-bottom:1px solid var(--line)}.contact-box{flex-direction:column;align-items:flex-start}}
 @media(max-width:600px){.container{width:90%}.hero h1{font-size:43px}.hero-proof{gap:16px;flex-wrap:wrap}.network-card{padding:17px}.chart{height:170px}.floating-card{display:none}.service-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.steps>div{border-right:0}.footer-wrap{flex-direction:column}.section,.dark-section,.about{padding:70px 0}}
+.floating-card.second {
+  bottom: -35px;
+  left: 20px;
+  z-index: 5;
+}
