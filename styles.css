@@ -65,177 +65,160 @@ footer{background:#061426;color:#aebfd3;padding:28px 0}.footer-wrap{display:flex
 .contact-details a:hover {
   color: #6edbff;
 }
-
 /* =========================================================
-   TELECOM + AI DIGITAL BACKGROUND
+   CLEAN TELECOM + AI HERO BACKGROUND
    ========================================================= */
 
 .hero {
   position: relative;
   overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 42%, rgba(25,181,254,.10), transparent 25%),
+    radial-gradient(circle at 92% 15%, rgba(11,92,255,.08), transparent 28%),
+    linear-gradient(135deg, #f8fbff 0%, #ffffff 55%, #f2f8ff 100%);
 }
 
-/* Moving digital grid */
+/* Subtle digital circuit pattern */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.45;
+  opacity: .35;
 
   background-image:
-    linear-gradient(rgba(11,92,255,.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(11,92,255,.055) 1px, transparent 1px);
+    linear-gradient(90deg, transparent 49.5%, rgba(11,92,255,.07) 50%, transparent 50.5%),
+    linear-gradient(0deg, transparent 49.5%, rgba(11,92,255,.07) 50%, transparent 50.5%);
 
-  background-size: 55px 55px;
+  background-size: 90px 90px;
 
-  animation: digitalGridMove 18s linear infinite;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 38%,
+    black 62%,
+    black 100%
+  );
 }
 
-/* Soft AI / telecom light fields */
+/* Soft moving telecom signal */
 .hero::after {
   content: "";
   position: absolute;
-  width: 650px;
-  height: 650px;
-  right: -180px;
-  top: -180px;
+  width: 700px;
+  height: 700px;
+  right: -260px;
+  top: -120px;
+  border-radius: 50%;
   pointer-events: none;
 
   background:
-    radial-gradient(circle at 30% 35%,
-      rgba(25,181,254,.16) 0,
-      rgba(25,181,254,.08) 18%,
-      transparent 48%),
+    radial-gradient(
+      circle,
+      rgba(25,181,254,.14) 0%,
+      rgba(25,181,254,.06) 30%,
+      transparent 68%
+    );
 
-    radial-gradient(circle at 70% 65%,
-      rgba(11,92,255,.12) 0,
-      transparent 52%);
-
-  filter: blur(2px);
-
-  animation: aiGlowMove 12s ease-in-out infinite alternate;
+  animation: telecomPulse 8s ease-in-out infinite alternate;
 }
 
-/* Keep website content above graphics */
-.hero > * {
+/* Keep actual content above graphics */
+.hero-grid {
   position: relative;
   z-index: 2;
 }
 
-@keyframes digitalGridMove {
-  from {
-    background-position: 0 0, 0 0;
-  }
-
-  to {
-    background-position: 55px 55px, 55px 55px;
-  }
-}
-
-@keyframes aiGlowMove {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  100% {
-    transform: translate(-60px, 35px) scale(1.08);
-  }
-}
-
-
 /* =========================================================
-   DIGITAL NETWORK / AI NODES
+   DIGITAL NETWORK NODES
    ========================================================= */
 
 .hero-visual::before {
   content: "";
   position: absolute;
-  width: 360px;
-  height: 360px;
-  right: -20px;
-  top: 20px;
+  width: 420px;
+  height: 300px;
+  right: -15px;
+  top: 60px;
   pointer-events: none;
   opacity: .55;
 
   background:
-    radial-gradient(circle at 15% 25%, #19b5fe 0 3px, transparent 4px),
-    radial-gradient(circle at 42% 12%, #0b5cff 0 3px, transparent 4px),
-    radial-gradient(circle at 75% 28%, #19b5fe 0 3px, transparent 4px),
-    radial-gradient(circle at 88% 55%, #0b5cff 0 3px, transparent 4px),
-    radial-gradient(circle at 52% 58%, #19b5fe 0 4px, transparent 5px),
-    radial-gradient(circle at 22% 78%, #0b5cff 0 3px, transparent 4px),
-    radial-gradient(circle at 72% 86%, #19b5fe 0 3px, transparent 4px);
+    radial-gradient(circle at 8% 35%, #19b5fe 0 2px, transparent 3px),
+    radial-gradient(circle at 28% 18%, #0b5cff 0 2px, transparent 3px),
+    radial-gradient(circle at 48% 42%, #19b5fe 0 3px, transparent 4px),
+    radial-gradient(circle at 68% 20%, #0b5cff 0 2px, transparent 3px),
+    radial-gradient(circle at 88% 48%, #19b5fe 0 3px, transparent 4px),
+    radial-gradient(circle at 35% 75%, #0b5cff 0 2px, transparent 3px),
+    radial-gradient(circle at 72% 82%, #19b5fe 0 2px, transparent 3px);
 
-  filter: drop-shadow(0 0 8px rgba(25,181,254,.45));
-
-  animation: networkFloat 9s ease-in-out infinite alternate;
+  animation: networkDrift 10s ease-in-out infinite alternate;
 }
 
-@keyframes networkFloat {
-  0% {
-    transform: translate(0, 0);
-    opacity: .35;
-  }
-
-  100% {
-    transform: translate(-25px, 18px);
-    opacity: .65;
-  }
-}
-
-
-/* AI scanning line */
+/* Connected digital lines */
 .hero-visual::after {
   content: "";
   position: absolute;
   width: 420px;
-  height: 1px;
-  right: 0;
-  top: 48%;
+  height: 300px;
+  right: -15px;
+  top: 60px;
   pointer-events: none;
+  opacity: .18;
 
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(25,181,254,.15),
-    rgba(25,181,254,.8),
-    rgba(25,181,254,.15),
-    transparent
-  );
+  background:
+    linear-gradient(25deg, transparent 48%, #0b5cff 49%, #0b5cff 50%, transparent 51%),
+    linear-gradient(-18deg, transparent 48%, #19b5fe 49%, #19b5fe 50%, transparent 51%),
+    linear-gradient(8deg, transparent 48%, #0b5cff 49%, #0b5cff 50%, transparent 51%);
 
-  filter: blur(.3px);
-
-  animation: aiScan 5s ease-in-out infinite;
+  background-size: 180px 130px;
+  animation: networkLines 12s linear infinite;
 }
 
-@keyframes aiScan {
-  0% {
-    transform: translateY(-130px);
-    opacity: 0;
+/* Hide the floating cards.
+   The dashboard itself is the main visual. */
+.floating-card {
+  display: none;
+}
+
+@keyframes telecomPulse {
+  from {
+    transform: scale(1);
+    opacity: .7;
   }
 
-  30% {
-    opacity: .8;
-  }
-
-  70% {
-    opacity: .8;
-  }
-
-  100% {
-    transform: translateY(150px);
-    opacity: 0;
+  to {
+    transform: scale(1.12);
+    opacity: 1;
   }
 }
 
+@keyframes networkDrift {
+  from {
+    transform: translate(0, 0);
+  }
 
-/* Respect reduced-motion accessibility setting */
-@media (prefers-reduced-motion: reduce) {
+  to {
+    transform: translate(-18px, 12px);
+  }
+}
+
+@keyframes networkLines {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 180px 130px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
   .hero::before,
   .hero::after,
   .hero-visual::before,
   .hero-visual::after {
-    animation: none;
+    opacity: .18;
   }
 }
