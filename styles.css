@@ -34,3 +34,30 @@ footer{background:#061426;color:#aebfd3;padding:28px 0}.footer-wrap{display:flex
   top: auto;
   bottom: 5px;
 }
+/* Contact details */
+.contact-details {
+  margin-top: 24px;
+  display: grid;
+  gap: 8px;
+}
+
+.contact-details p {
+  margin: 0;
+  font-size: 15px;
+  color: #d9e5f2;
+}
+
+.contact-details strong {
+  display: inline-block;
+  width: 65px;
+  color: #ffffff;
+}
+
+.contact-details a {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.contact-details a:hover {
+  color: #6edbff;
+}
