@@ -156,24 +156,6 @@ footer{background:#061426;color:#aebfd3;padding:28px 0}.footer-wrap{display:flex
 }
 
 /* Connected digital lines */
-.hero-visual::after {
-  content: "";
-  position: absolute;
-  width: 420px;
-  height: 300px;
-  right: -15px;
-  top: 60px;
-  pointer-events: none;
-  opacity: .18;
-
-  background:
-    linear-gradient(25deg, transparent 48%, #0b5cff 49%, #0b5cff 50%, transparent 51%),
-    linear-gradient(-18deg, transparent 48%, #19b5fe 49%, #19b5fe 50%, transparent 51%),
-    linear-gradient(8deg, transparent 48%, #0b5cff 49%, #0b5cff 50%, transparent 51%);
-
-  background-size: 180px 130px;
-  animation: networkLines 12s linear infinite;
-}
 
 /* Hide the floating cards.
    The dashboard itself is the main visual. */
